@@ -1,0 +1,32 @@
+<% include partials/header %>
+<div class="container">
+    <header class="jumbotron">
+        <div class="container">
+            <h1>Welcome To IIIT-A!</h1>
+            <p>View our hand-picked courses from all over the world</p>
+        </div>
+    </header>
+    <font size="6">
+    <table style="width:100%">
+        <tr>
+            <th>S.no</th>
+            <th>Name</th>
+            <th>Duration</th>
+            <th>Qualification</th>
+        </tr>
+        <% courses.forEach(function(course){ %>
+        <tr>
+            <td> <%=course.course_id %> </td>
+            <td><%=course.course_name %></td>
+            <td><%=course.duration %> </td>
+            <td><%=course.qualify %></td>
+        </tr>`
+        <% }); %>
+    </table>
+    </font>
+
+</div>
+
+<% include partials/footer %>
+
+<% include partials/footer %>

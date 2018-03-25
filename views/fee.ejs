@@ -1,0 +1,34 @@
+<% include partials/header %>
+<div class="container">
+    <header class="jumbotron">
+        <div class="container">
+            <h1>Welcome To IIIT-A!</h1>
+            <p>The Fee structure is as follows:</p>
+        </div>
+    </header>
+    <font size="6">
+        <table style="width:100%">
+            <tr>
+                <th>Semester</th>
+                <th>Branch</th>
+                <th>Tuition Fees</th>
+                <th>Other Fees</th>
+                <th>Total Fees</th>
+            </tr>
+            <% fees.forEach(function(fee){ %>
+            <tr>
+                <td> <%=fee.semester %> </td>
+                <td><%=fee.branch%></td>
+                <td><%=fee.tuition_fee %> </td>
+                <td><%=fee.other_fee %></td>
+                <td><%=fee.other_fee + fee.tuition_fee  %></td>
+            </tr>`
+            <% }); %>
+        </table>
+    </font>
+
+</div>
+
+<% include partials/footer %>
+
+<% include partials/footer %>
